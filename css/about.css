@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic', sans-serif;
+    background-color: #f8f7f1;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Fashion Fetish Light', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  height: 104px;
+  background: #8e8e8e;
+
+  display: flex;
+  justify-content: center;
+}
+
+.header-inner {
+  width: 1920px;
+
+  display: grid;
+  grid-template-columns: repeat(1920, 1px);
+  align-items: center;
+}
+
+/* ЛОГО */
+
+.logo {
+  grid-column: 120 / 250;
+}
+
+.logo img {
+  height: 57px;
+  display: block;
+}
+
+/* МЕНЮ */
+
+.nav {
+  grid-column: 1540 / 1800;
+
+  display: flex;
+  gap: 36px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+/* --- HERO SECTION --- */
+.page-hero {
+    padding: 80px 0 40px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
+.page-hero .desc {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.page-hero .desc div {
+    flex: 1;
+}
+
+/* --- WHY CHOOSE US --- */
+.why-choose {
+    padding: 60px 0 80px;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 60px;
+}
+
+.why-item {
+    text-align: center;
+    width: 200px;
+}
+
+.why-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.why-item h3 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* --- STATS --- */
+.stats {
+    padding: 60px 0 80px;
+}
+
+.stats h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.stats-table td {
+    border: 2px solid #1a1a1a;
+    padding: 20px 30px;
+    font-size: 14px;
+}
+
+.stats-table tr td:first-child {
+    width: 40%;
+    font-weight: bold;
+}
+
+.footer {
+  margin-top: 143px;
+  height: 162px;
+  background: #4a4a4a;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-inner {
+  width: 1920px;
+
+  display: grid;
+  grid-template-columns: repeat(1920, 1px);
+  align-items: center;
+}
+
+.footer .logo {
+  grid-column: 120 / 300;
+}
+
+.footer-address {
+  grid-column: 500 / 930;
+
+  color: white;
+  font-size: 24px;
+}
+
+.footer-phone {
+  grid-column: 980 / 1450;
+
+  color: white;
+  font-size: 24px;
+}
+
+.footer-email {
+  grid-column: 1500 / 1910;
+
+  color: white;
+  font-size: 24px;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+max-width: 768px {
+    .container { padding: 0 20px; }
+    header { padding: 20px; flex-direction: column; gap: 15px; }
+    .page-hero .desc { flex-direction: column; }
+    .why-grid { flex-direction: column; align-items: center; }
+    .footer-inner { flex-direction: column; gap: 10px; text-align: center; }
+}

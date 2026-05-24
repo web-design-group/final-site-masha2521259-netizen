@@ -1,0 +1,538 @@
+/* --- СБРОС И БАЗОВЫЕ СТИЛИ --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic', sans-serif;
+    background-color: #f8f7f1;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+h1{
+    font-family: 'Fashion Fetish Light', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+h2, h3, .logo {
+    font-family: 'Fashion Fetish Light', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+
+/* --- HEADER --- */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 104px;
+
+    background: transparent;
+
+    z-index: 100;
+}
+
+.header-inner {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 120px;
+}
+
+.logo {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.logo img {
+    height: 57px;
+    width: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 36px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    opacity: 0.7;
+}
+
+
+/* --- HERO --- */
+
+.hero {
+    height: 100vh;
+
+    background-image: url('../img/фотохероэкран.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-right: 120px;
+
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: right;
+    margin-top: 40px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-btn {
+    background: transparent;
+    border: 2px solid white;
+
+    padding: 15px 40px;
+
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* --- MISSION --- */
+.mission {
+    padding: 80px 0;
+}
+
+.mission .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mission h2 {
+    font-size: 46px;
+    width: 40%;
+}
+
+.mission p {
+    width: 55%;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* --- SERVICES --- */
+.services {
+    padding: 50px 0 80px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+  /* Общий контейнер для трёх карточек */
+.services-grid {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение */
+    gap: 30px; /* Расстояние между карточками */
+    flex-wrap: wrap; /* Чтобы переносились на мобильных */
+}
+
+/* Сама карточка */
+.service-card {
+    flex: 1; /* Все карточки растягиваются равномерно */
+    min-width: 280px; /* Минимальная ширина, чтобы не ломались */
+    background: white;
+    border-radius: 40px; /* Большое закругление как на макете */
+    overflow: hidden; /* Чтобы картинка не вылезала за углы */
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Лёгкая тень */
+}
+
+/* Картинка внутри карточки */
+.service-card img {
+    width: 100%;
+    height: 250px; /* Фиксированная высота картинки */
+    object-fit: cover; /* Картинка заполняет область без искажений */
+    display: block;
+}
+
+/* Текст заголовка */
+.service-card h3 {
+    margin: 20px 0 15px 0;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+/* Кнопка "подробнее" */
+.service-btn {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 12px 30px;
+    border-radius: 30px;        /* Закругление */
+    width: 100%;                
+    max-width: 300px;          
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+.service-btn:hover {
+    background: #333;
+    color: white;
+}
+
+/* --- PROJECTS --- */
+.projects {
+    padding: 50px 0 80px;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.projects-desc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #555;
+}
+
+.projects-desc div {
+    width: 45%;
+}
+
+.projects-link {
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    color: #333;
+}
+
+.projects-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    width: 173px;
+    height: 450px;
+    background: #ccc;
+    border-radius: 85px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-item:hover {
+
+
+
+: blur(4px) brightness(0.7);
+    transform: scale(0.95);
+}
+
+.project-item::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    pointer-events: none;
+}
+
+.project-item:hover::after {
+    opacity: 1;
+}
+
+/* --- REVIEWS --- */
+.reviews {
+    padding: 50px 0 80px;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-card img {
+    width: 105px;
+    height: 135px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.review-info h3 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 18px;
+}
+
+.review-info span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-info p {
+    font-size: 14px;
+}
+
+.highlight {
+    border: 2px solid #ffffff;
+}
+
+/* --- FORM SECTION --- */
+.form-section {
+    padding: 80px 0;
+    background: url('../img/Mask\ group.png') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.7);
+}
+
+.form-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.form-content {
+    width: 40%;
+}
+
+.form-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.form-wrapper {
+   
+    padding: 40px;
+    border-radius: 60px;
+    border: 2px solid rgba(255,255,255,0.3);
+    width: 40%;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* --- FOOTER --- */
+.footer {
+  margin-top: 143px;
+  height: 162px;
+  background: #4a4a4a;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer .logo {
+  margin-left: 119px;
+}
+
+.footer .logo img {
+  height: 57px;
+  width: auto;
+  display: block;
+}
+
+.footer-info {
+  display: flex;
+  gap: 190px;
+  margin-left: 246px;
+
+  color: white;
+  font-size: 24px;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+max-width: 768px {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+    .mission .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mission h2, .mission p {
+        width: 100%;
+    }
+    .form-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .form-content, .form-wrapper {
+        width: 100%;
+    }
+    .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+} filter
